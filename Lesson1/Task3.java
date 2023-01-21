@@ -11,13 +11,14 @@ public class Task3 {
         double a = iScanner.nextDouble();
         System.out.printf("Введите b: ");
         double b = iScanner.nextDouble();
-        System.out.println("Введите операцию: ");
+        System.out.printf("Введите операцию: ");
         String oper = iScanner.next();
-        System.out.printf("%.1f %s %.1f = %.1f", a, oper, b, calculate(a, b, oper));
+        calculate(a, b, oper);
         iScanner.close();
     }
-    static double calculate(double a, double b, String operation) {
+    static void calculate(double a, double b, String operation) {
         double res = 0;
+        boolean check = true;
         switch (operation) {
             case "+":
                 res = a + b;
@@ -31,7 +32,13 @@ public class Task3 {
             case "/": 
                 res = a / b;
                 break;
+            default:
+                System.out.println("Такой операции нет");
+                check = false;
+                break;
         }
-        return res;
+        if (check == true) {
+            System.out.printf("%.1f %s %.1f = %.1f", a, operation, b, res);
+        }
     }
 }
