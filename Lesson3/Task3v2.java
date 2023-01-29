@@ -1,7 +1,6 @@
 package Lesson3;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Random;
 
@@ -17,7 +16,7 @@ public class Task3v2 {
 
     Collections.sort(list);
     System.out.println(list);
-    
+
     int min = list.get(0);
     int max = list.get(list.size() - 1);
     int medium = list.get(list.size() / 2);
