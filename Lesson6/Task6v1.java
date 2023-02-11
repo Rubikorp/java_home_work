@@ -12,7 +12,7 @@ public class Task6v1 {
        n1.madeIn = "China";
        n1.model = "Msi";
        n1.color = "черный";
-       n1.hd = 500;
+       n1.hdd = 500;
        n1.ram = 16;
        n1.prise = 10000;
 
@@ -21,7 +21,7 @@ public class Task6v1 {
        n2.madeIn = "China";
        n2.model = "Asus";
        n2.color = "Серый";
-       n2.hd = 520;
+       n2.hdd = 520;
        n2.ram = 8;
        n2.prise = 5000;
 
@@ -30,7 +30,7 @@ public class Task6v1 {
        n3.madeIn = "Germany";
        n3.model = "HP";
        n3.color = "Синий";
-       n3.hd = 1000;
+       n3.hdd = 1000;
        n3.ram = 16;
        n3.prise = 15000;
 
@@ -69,9 +69,10 @@ public class Task6v1 {
     }
 
     static void printFilterColorCatalog(HashSet<Notebook> catalog, String color) {
-        System.out.printf("Ноутбуки с цветом %s:");
+        System.out.printf("Ноутбуки с цветом %s:", color );
         for (Notebook notebook : catalog) {
             if(color == notebook.color) {
+                System.out.println();
                 System.out.println(notebook.toString());
             }
         }

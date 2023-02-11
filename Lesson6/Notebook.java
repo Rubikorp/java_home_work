@@ -5,7 +5,7 @@ public class Notebook {
     String madeIn;
     String model;
     int ram;
-    int hd;
+    int hdd;
     int prise;
     String color;
 
@@ -13,6 +13,6 @@ public class Notebook {
     public String toString() {
         return String.format(
             "id: %d Made in: %s model: %s RAM: %d Gb HD: %d Gb Color: %s Prise: %d",
-            id, madeIn, model, ram, hd, color, prise);
+            id, madeIn, model, ram, hdd, color, prise);
     }
 }
